@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 160 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-30.7155,22.6073)">
+        <g transform="matrix(29.1667,0,0,29.1667,155.542,16.4624)">
+        </g>
+        <text x="67.472px" y="16.462px" style="font-family:'OriyaMN', 'Oriya MN';font-size:29.167px;">Seafra</text>
+    </g>
+    <g id="Layer1" transform="matrix(1,0,0,1,-25,0)">
+        <g transform="matrix(1,0,0,1,0,6.10529)">
+            <path d="M47.624,36.106L165.602,36.106" style="fill:none;stroke:rgb(215,197,22);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,0,10.7815)">
+            <text x="73.33px" y="44.048px" style="font-family:'OriyaMN', 'Oriya MN';font-size:12.5px;">Since 1923</text>
+        </g>
+    </g>
+</svg>

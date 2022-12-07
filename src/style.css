@@ -1,0 +1,621 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Gold color used in logo */
+  --clr-accent-1: #d7c516;
+  
+}
+
+/* Unedited CSS Reset */
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Unedited CSS Reset */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Unedited CSS Reset */
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Unedited CSS Reset */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Unedited CSS Reset */
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toprow {
+  min-width: 100%;
+  height: 10vh;
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100%;
+}
+
+.dropdown {
+  display: flex;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown-menu {
+  position:absolute;
+  width: 100%;
+  top: 100%;
+  background-color: white;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown :last-child {
+  padding-bottom: 0;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+}
+
+.dropdown-item {
+  height: 3.25rem;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  font-size: 1.25rem;
+
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+
+.dropdown-item a {
+  text-decoration: none;
+  color: black;
+  align-self: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.mobilemenubutton {
+  height: 10vh;
+  text-decoration: none;
+  background-color: white;
+  border: none;
+}
+
+.mobilemenubutton:hover {
+  cursor: pointer;
+}
+
+.dropdown.active > .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  width: 100vw;
+}
+
+.menubar {
+  width: 30rem;
+  font-size: 1.3rem;
+  gap: 1rem;
+  margin-right: 5rem;
+
+  display: flex;
+  flex-wrap: none;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.menubar a {
+  text-decoration: none;
+  color: white;
+}
+
+.centerbox {
+  margin-top: 3em;
+  margin-left: clamp(5rem, 1vw + 11.5rem, 13rem);
+  justify-self: flex-start;
+  align-self: flex-start;
+  color: white;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.centertop {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+  border-bottom: 1px solid #d7c516;
+}
+
+.centerbottomdiv {
+  color: #fff;
+  font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+}
+
+.centerbottomblue {
+  color: rgb(0, 166, 255);
+  animation: animate 6s ease-in-out infinite;
+  transform: translate(0%, -100%);
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+.bg {
+  min-height: 100%;
+  /* Above code suggested by https://css-tricks.com/perfect-full-page-background-image/ */
+
+  background-position: right;
+  background-attachment: fixed;
+  background-image: url('./images/bgimage.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture, 
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+.menupagediv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.infobox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: clamp(.5rem, 1vw + .8rem, 1.2rem);
+}
+
+.infobox p{
+  padding: .5rem;
+}
+
+.filternav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.filternavinnerdiv {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.filterdiv {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  border-left: 1px black;
+  border-style: groove;
+  padding-left: clamp(.5em, .8em, 5em);
+  padding-right: clamp(.5em, .8em, 5em);
+  min-height: 2.5em;
+}
+
+input.filterinput {
+  justify-self: center;
+  width: clamp(.5em, 1em, 5em);
+  height: clamp(.5em, 1em, 5em);;
+}
+
+.filterinputlabel {
+  font-size: clamp(1rem, 1vw + .4rem, 1rem);
+}
+
+
+.optionscarousel {
+  background-color: white;
+}
+
+.foodcategories {
+  padding: .5em;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, clamp(1.5rem, 2vw + 3rem, 7rem));
+  gap: clamp(2rem, 1vw + .5rem, 4.5rem);
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.foodoption {
+  display: grid;
+  grid-template-rows: 70% 30%;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodoption h3 {
+  font-size: clamp(1rem, 1vw + .5rem, 1.5rem);
+  height: auto;
+  text-align: center;
+}
+
+.foodoptionimage {
+  width: clamp(1rem, 1vw + 2rem, 3rem);
+  justify-self: center;
+}
+
+.imagebutton,
+.foodoptionbutton {
+  color: black;
+  text-decoration: none;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.categorydiv {
+  height: clamp(2rem, 3vw + 2rem, 5rem);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: white;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categorytitleimage {
+  width: clamp(15rem, 25vw + 20rem, 60rem);
+}
+
+.menudiv {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  background-color: white;
+  border: 3px solid var(--clr-accent-1);
+  border-radius: 5px;
+  width: 80%;
+}
+
+.titlecard {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: clamp(2.9rem, 2vw + 1rem, 3.5rem);
+  color: white;
+  border-bottom: 1px solid #d7c516;
+  align-self: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.menulayout {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.menurow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .3rem;
+  padding: .3rem;
+  border-bottom: 1px solid black;
+}
+
+.menurow span {
+  text-align: center;
+}
+
+.itemnameprice {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  font-weight: 550;
+  font-size: 1.1rem;
+}
+
+.itemdescicon {
+  width: 100%;
+}
+
+.imagebutton {
+  z-index: 1;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hiddenfood {
+  display: none;
+  width: clamp(10rem, 25vw + 10rem, 30rem);
+  margin: .2rem;
+}
+
+.imagebutton {
+  height: 1.5rem;
+  width: 1.5rem;
+  vertical-align: bottom;
+  margin-left: .3rem;
+}
+
+.menuitemicon {
+  width: 1.5rem;
+  height: 1.5rem;
+  align-self: center;
+  vertical-align: bottom;
+}
+
+.menuitem {
+  font-size: clamp(1rem, 2vw + .5rem, 1.5rem);
+}
+
+#Homebutton:hover,
+#Menubutton:hover,
+#Contactbutton:hover {
+  color: var(--clr-accent-1) !important;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  margin: 1rem;
+  height: calc(20vw + 10rem);
+  min-height: 15rem; 
+  width: 70vw;
+  max-width: 40rem;
+}
+
+#contactpagediv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: .3rem;
+  border: 2px solid var(--clr-accent-1);
+
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  background-color: white;
+  border: 3px solid var(--clr-accent-1);
+  border-radius: 5px;
+}
+
+#contactinfodiv {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em 0 0 0;
+  width: min(90%, 70rem);
+  gap: .2rem;
+}
+
+.infodetailsdiv {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1em;
+  width: 100%;
+  font-size: clamp(1rem, 1vw + .4rem, 2rem);
+}
+
+#seafraemail {
+  font-size: 1.3rem;
+}
+
+#seafradetailsdiv,
+#contactlogosdiv {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.contactpageicon {
+  width: 2rem;
+}
+
+#contactform {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  width: min(90%, 40rem);
+  border-top: 1px solid black;
+}
+
+textarea {
+  resize: none;
+}
+
+#contactsubmitbutton {
+  height: 2rem;
+  width: 5rem;
+  margin: 1rem 0 0 0;
+}
+
+#inputfieldset {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5rem;
+  border: none;
+  
+}
+
+/* Unedited CSS Reset */
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 700px) {
+
+  /* Home Page */
+  .centerbox {
+    margin-top: 3rem;
+    margin-left: 0;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .menudiv {
+    margin-bottom: 7rem;
+    width: 95%;
+  }
+
+  .foodcategories {
+    gap: clamp(.1rem, .8vw, 10.5rem);
+    
+  }
+
+  .categorydiv {
+    height: clamp(2rem, 3vw + 3rem, 7rem);
+  }
+
+  /* Homepage Title Size on Mobile */
+.centerbottomtext,
+.centertop, 
+.centerbottomblue {
+  font-size: clamp(2rem, 2vw + 2rem, 3rem);
+}
+
+}
+
+@media (min-width: 700px) {
+
+  .filternavinnerdiv {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .categorytitleimage {
+    width: clamp(25rem, 50vw + 30rem, 100%);
+  }
+}
